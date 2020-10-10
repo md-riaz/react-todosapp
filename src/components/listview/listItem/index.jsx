@@ -9,10 +9,10 @@ const ListItem = ({ todo, toggleSelect, toggleComplete }) => {
          <CustomInput
             type='checkbox'
             id={todo.id}
-            checked={todo.isSelect}
             onChange={() => {
                toggleSelect(todo.id);
             }}
+            checked={todo.isSelect}
          />
          <div className='mx-3'>
             <h4>{todo.text}</h4>

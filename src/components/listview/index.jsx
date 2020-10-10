@@ -22,7 +22,7 @@ const ListView = ({ todos, toggleSelect, toggleComplete }) => {
 };
 
 ListView.propTypes = {
-   todos: PropTypes.object.isRequired,
+   todos: PropTypes.array.isRequired,
    toggleSelect: PropTypes.func.isRequired,
    toggleComplete: PropTypes.func.isRequired,
 };

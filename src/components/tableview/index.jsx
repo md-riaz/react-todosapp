@@ -30,7 +30,7 @@ const TableView = ({ todos, toggleSelect, toggleComplete }) => {
    );
 };
 TableView.propTypes = {
-   todos: PropTypes.object.isRequired,
+   todos: PropTypes.array.isRequired,
    toggleSelect: PropTypes.func.isRequired,
    toggleComplete: PropTypes.func.isRequired,
 };
