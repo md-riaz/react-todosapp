@@ -103,9 +103,23 @@ export default class Todos extends Component {
          />
       );
    };
-   clearSelected = () => {};
-   clearCompleted = () => {};
-   reset = () => {};
+
+   clearSelected = () => {
+      const todos = this.state.todos.filter((todo) => !todo.isSelect);
+      this.setState({ todos });
+   };
+   clearCompleted = () => {
+      const todos = this.state.todos.filter((todo) => !todo.isComplete);
+      this.setState({ todos });
+   };
+   reset = () => {
+      this.setState({
+         filter: 'all',
+         searchTerm: '',
+         view: 'list',
+         isTodoFormOpen: false,
+      });
+   };
 
    render() {
       return (
